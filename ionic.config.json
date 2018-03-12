@@ -1,0 +1,8 @@
+{
+  "name": "iMuseum",
+  "app_id": "",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

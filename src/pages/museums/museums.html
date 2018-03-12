@@ -1,0 +1,40 @@
+<!--
+  Generated template for the Museums page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-title>Museums </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list *ngIf="museums">
+  <ion-item *ngFor="let museum of museums">
+    <!-- ion-icon color="primary" item-right [name]="museum.display?'ios-remove-circle-outline':'ios-add-circle-outline'"></ion-icon -->
+    <h2>{{museum.name}}</h2>
+    <div >
+      <ion-card>
+  <img src="museum.images[0]" />
+  <ion-card-content>
+    <ion-card-title>
+      Nine Inch Nails Live
+    </ion-card-title>
+    <p>{{museum.details}}</p>
+    <p>
+      The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+  </ion-card></div>
+  </ion-item>
+</ion-list>
+<p *ngIf="!museums"> No museums </p>
+</ion-content>

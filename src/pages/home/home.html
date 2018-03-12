@@ -1,0 +1,82 @@
+<!--
+  Generated template for the Home page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-title >Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+      <div class="header-image" >
+                <ion-slides autoplay="5000" loop="true" speed="3000" style="width:100%;">
+                <ion-slide >
+                  <img src="assets/main/1.jpg">
+                </ion-slide>
+                <ion-slide >
+                  <img src="assets/main/2.jpg">
+                </ion-slide>
+                
+              </ion-slides>
+        </div>
+        <div class="main-content" >
+            <ion-segment [(ngModel)]="info" color="primary" >
+              <ion-segment-button value="gear">
+                  <ion-icon name="list-box"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="audio">
+                  <ion-icon name="musical-notes"></ion-icon>
+              </ion-segment-button>
+              <ion-segment-button value="video">
+                  <ion-icon name="videocam"></ion-icon>
+              </ion-segment-button>
+          </ion-segment>
+        </div>
+        <ion-item text-wrap class="description">
+          <div  class="padding">
+            <h2>Independence Memorial Museum</h2>
+            <hr>
+            <p>The Independence Memorial Museum sits on a prominent Windhoek hilltop location and was officially inaugurated
+              by President Hifikepunye Pohamba on the 21st March 2014. This was also the 24th anniversary of Independence.
+              It 'tells, records and preserves Namibia's history' and stands as the centre where 'anti-colonial resistance
+              and the national liberation struggle are told'. The President also unveiled the Genocide Memorial and the Sam
+              Nujoma Statues, both standing to the front of the museum.</p>
+          </div>
+          <p>
+             ...
+          </p>
+          <div  class="padding-top">
+            <p>The actual building is an unusual design and was built by the North Koreans. Either take an external glass-fronted
+              elevator (which offer great views of the town on the way up) or use a different entrance to climb (many) flights
+              of stairs. This museum gives great insights in the history of the country with graphic paintings dramatically
+              conveying the tragedy of war, display cabinets and memorabilia.</p>
+          </div>
+        </ion-item>
+        <!-- <iframe top="-40px" width="100%" height="100%" [src]="trustedUrl" frameborder="0" allowfullscreen>
+      </iframe> -->
+      <ion-list *ngIf="Artefacts">
+        <ion-item *ngFor="let artefact of Artefacts | async">
+          <!-- ion-icon color="primary" item-right [name]="museum.display?'ios-remove-circle-outline':'ios-add-circle-outline'"></ion-icon -->
+          
+          <div>
+            <ion-card>
+        <img src="assets/main/1.jpg" />
+        <ion-card-content text-wrap>
+          <ion-card-title>
+            <h2>{{artefact.Title}}:{{artefact.id}}</h2>
+          </ion-card-title>
+          <p>{{artefact.Details}}</p>
+          <p>{{artefact.images[0]}}</p>
+        </ion-card-content>
+        </ion-card></div>
+        </ion-item>
+      </ion-list>
+
+</ion-content>

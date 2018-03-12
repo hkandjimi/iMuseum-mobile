@@ -1,0 +1,58 @@
+
+.ios{
+    page-home {
+        ion-header{
+            padding-top:25px;
+            color: black !important;
+        }
+    }
+}
+
+.ios, .md ,.wp{
+
+        page-home {
+        .header-image {
+            // background-image: url(https://ununsplash.imgix.net/photo-1421091242698-34f6ad7fc088?fit=crop&fm=jpg&h=650&q=75&w=950);
+            height: 40vh;
+        }
+ 
+        .main-content {
+            //background-color: map-get($colors, dark);
+            //box-shadow: 0px -1px 13px 1px rgba(0,0,0,0.3);
+            height: 0px;
+        }
+        .description{
+            //font-size: 1.4rem;
+            //line-height: 1.6;
+            white-space: normal;
+        }
+        .scroll-content {
+            padding-top: 0 !important;
+        }
+        ion-navbar {
+            //opacity: 0.4;
+            box-shadow: 0px 1px 13px 1px rgba(0,0,0,0.77);
+        }
+ 
+        ion-segment {
+            padding: 0px 2px;
+            position: relative;
+            top: -40px;
+            z-index: 2;
+            background-color:rgba(245,245,245,.80)
+        }
+ 
+        // ion-segment-button {
+        //     border-color: map-get($colors, primary) !important;
+        //     color: map-get($colors, dark) !important;
+            
+        // }
+        // .segment-button:hover {
+        //     background-color: map-get($colors, primary) !important;
+        //     color: map-get($colors, light) !important;
+        // }
+        
+    }
+
+
+}

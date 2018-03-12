@@ -1,0 +1,15 @@
+.ios{
+    page-map {
+        ion-header{
+            padding-top:25px;
+            color: black !important;
+        }
+    }
+}
+.ios, .md, .wp{
+    page-map {
+        #map {
+            height: 100%;
+        }
+    }
+}
