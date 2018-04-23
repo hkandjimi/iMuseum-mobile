@@ -1,9 +1,10 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler} from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { BeaconProvider } from '../providers/beacon-provider';
 import { CouchbaseProvider } from "../providers/couchbase-provider";
-import {KSSwiperModule} from 'angular2-swiper/dist/ks-swiper.module';
+//import {KSSwiperModule} from 'angular2-swiper/dist/ks-swiper.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { CouchbaseLite } from '@ionic-native/couchbase-lite';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -50,7 +51,7 @@ const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(MyApp,{tabsPlacement: 'bottom'}),
-      KSSwiperModule
+      //KSSwiperModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,6 +67,7 @@ const firebaseConfig = {
   providers: [
     BeaconProvider,
     StatusBar,
+    CouchbaseLite,
     CouchbaseProvider,
     SplashScreen,
     GoogleMaps,

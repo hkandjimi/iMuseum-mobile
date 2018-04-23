@@ -7,6 +7,7 @@
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-navigation href="http://www.namcars.net" />
+    <allow-navigation href="http://192.168.1.100:4984/imuseum" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -85,4 +86,6 @@
     <plugin name="cordova-plugin-statusbar" spec="2.2.2" />
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
+    <plugin name="com.couchbase.lite.phonegap" spec="~1.4.1" />
+    <engine name="ios" spec="~4.4.0" />
 </widget>

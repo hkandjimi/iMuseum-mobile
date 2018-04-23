@@ -28,6 +28,7 @@ export class Museums {
     setTimeout(() => {
         this.couchbase.getChangeListener().subscribe(data => {
             for(let i = 0; i < data.length; i++) {
+                console.log(data.length);
                 if(!data[i].hasOwnProperty("deleted") && data[i].id.indexOf("_design") === -1) {
                     this.couchbase.getDatabase().getDocument(data[i].id).then((result: any) => {
                         if(result.type === "museum") {

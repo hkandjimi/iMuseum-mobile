@@ -16,12 +16,12 @@ export class CouchbaseProvider {
     public constructor(public http: Http, platform: Platform) {
         if(!this.isInstantiated) {
             platform.ready().then(() => {
-                (new Couchbase()).openDatabase("museums").then(database => {
+                (new Couchbase()).openDatabase("imuseum").then(database => {
                     this.database = database;
                     let views = {
                         items: {
                             map: function(doc) {
-                                if(doc.name && doc.region) {
+                                if(doc.type == "museum") {
                                     emit(doc._id, {name: doc.name,contact:doc.contact,region:doc.region,hours:doc.hours,lat:doc.lat,long:doc.long,images:doc.images,details:doc.details, rev: doc._rev})
                                 }
                             }.toString()
@@ -31,7 +31,7 @@ export class CouchbaseProvider {
                     this.database.listen(change => {
                         this.listener.emit(change.detail);
                     });
-                    this.database.sync("http://192.168.1.108:4984/museums", true);
+                    this.database.sync("http://192.168.1.100:4984/imuseum", true);
                     this.isInstantiated = true;
                 }, error => {
                     console.error(error);
